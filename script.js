@@ -1,10 +1,13 @@
-// Add event listener to the "Learn More" button
-document.querySelector('#about button').addEventListener('click', () => {
-    alert('You clicked the Learn More button!');
+// Mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
 });
 
-// Add event listener to the "Send" button
-document.querySelector('#contact button').addEventListener('click', (e) => {
-    e.preventDefault();
-    alert('Message sent!');
+// Contact form submission (just a demo alert)
+document.getElementById('contact-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert('Thank you for your message!');
 });
